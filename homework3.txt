@@ -1,0 +1,81 @@
+Предварительно
+Создала репозиторий homework3 в GIT HUB
+git clone https://github.com/Ferrum6/homework3.git
+cd homework3
+
+1. На локальном репозитории сделать ветки для:
+ 
+- Postman - git branch Postman
+- Jmeter - git branch Jmeter
+- CheckLists - git branch CheckLists
+- Bug Reports - git branch Bug Reports
+- SQL - git branch SQL 
+- Charles -git branch Charles
+- Mobile testing - git branch Mobile testing
+
+2. Запушить все ветки на внешний репозиторий - git push --all
+
+3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта
+git checkout Bug_reports
+
+touch bugreport_structure.txt
+
+vim bugreport_structure.txt
+ INSERT
+1.ID
+2.Summary
+3.Product
+4.Platform
+5.Status
+6.Priority
+7.Severity
+8.Preconditions
+9.Steps to reproduce
+10.Actual result
+11.Expected result
+12.Attachments
+
+ESC+:wq+Enter
+
+git add bugreport_structure.txt
+
+git commit -m "bug report structure"
+
+4. Запушить структуру багрепорта на внешний репозиторий - git push
+
+5. Вмержить ветку Bag Reports в Main 
+git checkout - (мы в main)
+git merge Bug_reports
+
+6. Запушить main на внешний репозиторий.  -  git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+Идем на ветку CheckLists -  git checkout Checklists
+ touch checklist.txt
+vim checklist.txt
+INSERT
+1. Build
+2. Environment
+3. Test date
+4. Tester
+5. Test type
+6. Checking
+7. Result
+
+ESC+:wq+Enter
+
+git add checklist.txt
+
+git commit -m "checklist sample"
+
+8. Запушить структуру на внешний репозиторий
+git push
+
+9. На внешнем репозитории сделать Pull Request ветки "CheckLists в main"
+вверху выходит - Compare and pull requestб нажимаем, - "Create pull request"
+дальше "Merge pull request"
+"Confirm Merge"
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+git checkout main
+git pull
